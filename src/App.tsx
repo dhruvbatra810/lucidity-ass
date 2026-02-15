@@ -1,15 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Navbar from './components/navbar'
 import './App.css'
+import Inventory from './features/dashboard/inventorySection'
+import { useEffect } from 'react'
+import { useAppDispatch } from './store/store'
+import { fetchInventory } from './store/reducers/inventory'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const dispatch = useAppDispatch();
 
+  useEffect(()=>{
+        dispatch(fetchInventory())
+  },[])
   return (
-    <>
-      
-    </>
+    <div className='flex flex-col'>
+      <Navbar/>
+      <Inventory/>
+    </div>
   )
 }
 

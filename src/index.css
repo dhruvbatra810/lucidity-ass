@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #14161b;
+  color: #e5e7eb;
+}
+
+/* Layout container */
+.container {
+  width: 90%;
+  margin: 40px auto;
+}
