@@ -13,7 +13,7 @@ const cards = [
     {id: "numberOfCategories",heading: "No of Category",icon:<><MdOutlineCategory /></>},
 ]
 export default function CardGroup({summary}:{summary:Summary}){
-    return <div className="flex gap-5 w-full">
+    return <div className="flex gap-5 w-full flex-wrap">
         {cards.map((card,id)=> <Card heading={card.heading} icon={card.icon}  value={ (card.id === 'totalStoreValue' ? '$': '') + String(summary[card.id as keyof typeof summary] || 0)} key={id}/> )}
     </div>
 }

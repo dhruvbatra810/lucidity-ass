@@ -199,7 +199,6 @@ const InventoryTable: React.FC<InventoryTableProps> = ({ products }) => {
           margin: '20px auto',
           boxShadow: 3,
           borderRadius: 2,
-          overflow: 'hidden'
         }}
       >
         <Table sx={{ minWidth: 650 }}>
